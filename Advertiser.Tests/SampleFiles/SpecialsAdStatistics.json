@@ -1,0 +1,29 @@
+﻿{
+	"campaign" : "552EBAB0-C879-4F81-A637-5B52AC4B8B25",
+	"owner" : "2060EBBC-53DA-43BA-8548-20469F4A2F45",
+	"totalImpressions" : 1240,
+	"totalSpend" : 1240,
+	"cpm" : 1,
+	"budget" : 100000,
+	"start" : "2014-01-31 16:00:00Z",
+	"end" : "2014-03-01 08:00:00Z",
+	"range" : 5000,
+	"impressionsPerDay" : 
+	[
+		{
+			"reportDate" : "2014-02-01",
+			"utcDateStart" : "2014-01-31 16:00:00Z",
+			"impressions" : 143
+		},
+		{
+			"reportDate" : "2014-02-02",
+			"utcDateStart" : "2014-02-01 16:00:00Z",
+			"impressions" : 185
+		},
+		{
+			"reportDate" : "2014-02-03",
+			"utcDateStart" : "2014-02-02 16:00:00Z",
+			"impressions" : 185
+		}
+	]
+}

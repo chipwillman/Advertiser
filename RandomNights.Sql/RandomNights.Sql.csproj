@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E169D9A-4F16-4384-BD54-D119DF442C87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RandomNights.Sql</RootNamespace>
+    <AssemblyName>RandomNights.Sql</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\random-nights\wwDrink.data\IndexAttribute.cs">
+      <Link>IndexAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Address.cs">
+      <Link>Models\Address.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Crafter.cs">
+      <Link>Models\Crafter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Drink.cs">
+      <Link>Models\Drink.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Establishment.cs">
+      <Link>Models\Establishment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Preference.cs">
+      <Link>Models\Preference.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Profile.cs">
+      <Link>Models\Profile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\Models\Review.cs">
+      <Link>Models\Review.cs</Link>
+    </Compile>
+    <Compile Include="..\..\random-nights\wwDrink.data\RandomNightsContext.cs">
+      <Link>RandomNightsContext.cs</Link>
+    </Compile>
+    <Compile Include="Migrations\201402120911553_DbMigration1.0.0.cs" />
+    <Compile Include="Migrations\201402120911553_DbMigration1.0.0.Designer.cs">
+      <DependentUpon>201402120911553_DbMigration1.0.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201402120911553_DbMigration1.0.0.resx">
+      <DependentUpon>201402120911553_DbMigration1.0.0.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
