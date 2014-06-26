@@ -2,6 +2,6 @@
 {
     public class Constants
     {
-        public const int RecordCount = 20000;
+        public const int RecordCount  = 20000;
     }
 }
